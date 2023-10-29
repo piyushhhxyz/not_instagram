@@ -1,8 +1,7 @@
-import { ID } from "appwrite";
+import { ID,Query } from "appwrite";
 
 import { INewUser } from "@/types";
 import { account, appwriteConfig, avatars, databases } from "./config";
-import { Query } from "@tanstack/query-core";
 
 //create Appwrite function, being utilised by react-query
 
@@ -44,7 +43,7 @@ export async function saveUserToDB(user : {
     try {
         const newUser = await databases.createDocument(
             appwriteConfig.databaseId, //To know which db to add
-            appwriteConfig.postsCollectionId, //To know which collection to add.
+            appwriteConfig.usersCollectionId, //To know which collection to add.
             ID.unique(),
             user,
         )
@@ -79,7 +78,7 @@ export async function getCurrentUser(){
             appwriteConfig.databaseId,
             appwriteConfig.usersCollectionId,
             [
-                Query.equal('accountId', currentAccount.$id)
+                Query.equal("accountId", currentAccount.$id)
             ]
         )
         if(!currentUser) throw Error;
