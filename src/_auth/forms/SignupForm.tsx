@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage} from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -19,6 +19,7 @@ function SignupForm() {
   const { checkAuthUser, isLoading: isUserLoadin } = useUserContext();
   const { mutateAsync: createUserAccount, isLoading: isCreatingUser} = useCreateUserAccount();
   const { mutateAsync: signInAccount, isLoading: isSigningIn} = useSignInAccount()
+  const navigate = useNavigate();
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -58,7 +59,14 @@ function SignupForm() {
 
     const isLoggedIn = await checkAuthUser();
     if(isLoggedIn) {
-      
+      form.reset(); 
+      navigate("/")
+    }
+    else {
+      return toast({
+        title: "SignUp Failed! Please try again",
+        description: "Oh No! its not us, its you!",
+      })
     }
     
   }
