@@ -10,7 +10,7 @@ import { useForm } from "react-hook-form"
 import { SignupValidation } from "@/lib/validations"
 import { z } from "zod"
 import Loader from "@/components/shared/Loader"
-import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations"
+import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queries"
 import { useUserContext } from "@/context/AuthContext"
 
 
