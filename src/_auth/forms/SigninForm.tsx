@@ -18,7 +18,8 @@ function SignIpForm() {
   const { toast } = useToast();
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
   // const { mutateAsync: createUserAccount, isPending: isCreatingUser} = useCreateUserAccount();
-  const { mutateAsync: signInAccount} = useSignInAccount()
+  // Query
+  const { mutateAsync: signInAccount, isPending } = useSignInAccount();
   const navigate = useNavigate();
 
   // 1. Define your form.
@@ -102,11 +103,13 @@ function SignIpForm() {
             )}
             />
           <Button type="submit" className="shad-button_primary">
-            {isUserLoading ? (
+            {isPending || isUserLoading ? (
               <div className="flex-center gap-2">
-                <Loader/> Loading...
+                <Loader /> Loading...
               </div>
-            ) : ("Signin")}
+            ) : (
+              "Log in"
+            )}
           </Button>
 
           <p className="text-sm text-light-2 text-center mt-2">

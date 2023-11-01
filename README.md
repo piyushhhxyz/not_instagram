@@ -1,7 +1,7 @@
 # not_instagram
 
 <p align="center">
-  <img src="link-to-your-screenshot" alt="not_instagram Screenshot">
+  <img src="link-to-your-screenshot" alt="not_instagram ss">
 </p>
 
 ## Overview
@@ -11,28 +11,25 @@
 ## Key Features
 
 ### 1. Infinite Scroll
-Experience an endless stream of captivating content. Dive into exploration and keep the generations engaged.
 
 ### 2. Native Mobile Feel
-Deliver a native app-like experience within your web browser. Seamless navigation, user-friendly interactions, and more.
 
 ### 3. Stunning UI
-Enjoy a user interface meticulously designed for a delightful and intuitive user experience. Engage with content like never before.
 
 ## Tech Stack
 
 ### Frontend
 
-- **React Querry (TanStack Querry):** Advanced data fetching library with backend-agnostic capabilities, offering auto-caching, refetching, parallel queries, and first-class mutations.
+- **React Querry (TanStack Querry):** backend-agnostic,Advanced data fetching library, offering auto-caching, refetching, parallel queries, and first-class mutations.
 
 ### Backend
 
-- **Appwrite:** A robust Backend-as-a-Service tool that streamlines server-side operations, making development faster and easier.
+- **Appwrite:** Backend-as-a-Service tool.
 
 ### UI/UX
 
-- **Tailwind CSS:** A utility-first CSS framework that simplifies responsive web interface creation, ensuring stunning designs with minimal effort.
-- **ShadCN:** A collection of components and utilities designed to enhance UI development, including comprehensive form management, efficient state handling, and robust form validation.
+- **Tailwind CSS:**
+- **ShadCN:** 
 
 ## Getting Started
 
@@ -42,19 +39,19 @@ Enjoy a user interface meticulously designed for a delightful and intuitive user
    ```shell
    git clone https://github.com/your-username/not_instagram.git
    ```
-2.Navigate to the project folder.
-```shell
-    cd not_instagram
-```
-3.Install the required dependencies.
-```shell
-    npm install
-```
-4.Start the development server.
-```shell
-    npm start
-```
+2. Navigate to the project folder.
+    ```shell
+        cd not_instagram
+    ```
+3. Install the required dependencies.
+    ```shell
+        npm install
+    ```
+4. Start the development server.
+    ```shell
+        npm start
+    ```
 ### License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the [MIT License](xyz.com). See the [LICENSE](xyz.com) file for details.
 
 [Link Link Coming Soon]

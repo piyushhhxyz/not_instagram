@@ -11,3 +11,10 @@ export const SigninValidation = z.object({ // SignupValidation Schema
     email: z.string().email() ,
     password: z.string().min(8, {message:"Password Must Be atleast 8characters Long"})
 })
+
+export const PostValidation = z.object({ // SignupValidation Schema
+    caption: z.string().min(5).max(2200), 
+    file: z.custom<File[]>(),
+    location: z.string().min(2).max(100), 
+    tags: z.string()
+})
